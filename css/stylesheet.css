@@ -122,9 +122,7 @@ header {
 }
 
 /** section **/
-section {
-    padding: 20px;
-}
+
 section h1 {
     padding: 20px;
 }
@@ -132,32 +130,43 @@ section h1 {
 /** home **/
 
 .image-slide {
-    height: 250px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
 }
 
 /** service **/
 
+.image-banner {
+    background-image: linear-gradient(to right, rgba(255, 103, 56, 0.2), rgba(237, 131, 45, 0.2)),
+        url(../assets/reuniao.jpg);
+    height: 250px;
+    width: 70%;
+    background-position: center bottom; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .image-service {
     height: 100%;
+    max-height: 400px;
     width: 100%;
     object-fit: cover;
 }
 
-.ul-service > li::before {
-    content: ' ';
-    background: #069;
-    display: inline-flex;
-    width: 20px;
-    height: 4px;
-    margin-right: 8px;
-    bottom: 3px;
-    position: relative;
-}
-
 .service-box {
     height: 400px;
+    min-height: 400px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.service-box div {
+    width: 50%;
 }
 
 /** styles **/
@@ -326,18 +335,28 @@ footer {
         display: none;
     }
 
-    /** Services  **/
+    /** Service **/
 
-    .flex-reverse {
-        display: flex;
-        flex-direction: column-reverse;
+    .image-banner {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .image-gradient {
+        width: 100%;
     }
 
     .service-box {
         height: 100%;
+        flex-direction: column;
+        margin-top: 50px;
     }
 
-    .image-service {
-        height: 150px;
+    .service-box div {
+        width: 100%;
+    }
+
+    .flex-reverse {
+        flex-direction: column-reverse;
     }
 }
