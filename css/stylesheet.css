@@ -13,6 +13,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    font-size: 0.87rem;
 }
 
 *,
@@ -33,6 +34,7 @@ ul {
 }
 
 /** Header **/
+
 header {
     position: fixed;
     position: -webkit-fixed;
@@ -44,6 +46,7 @@ header {
 }
 
 /** Navigation **/
+
 .nav-container {
     margin: 0 auto;
     padding: 10px 0;
@@ -97,6 +100,7 @@ header {
 }
 
 /** style on scroll **/
+
 .nav-container.scroll {
     background: #f7f7f7;
     /* border-bottom: 3px solid #069; */
@@ -112,6 +116,7 @@ header {
 }
 
 /** active navigation **/
+
 .nav-container.scroll a.active {
     color: #069;
     /* border-bottom: 2px solid #069; */
@@ -254,12 +259,6 @@ footer {
         -o-transition: all ease-in-out 0.4s;
         -webkit-transition: all ease-in-out 0.4s;
     }
-
-    /* .tab-nav {
-        position: absolute;
-        z-index: 1;
-        display: none;
-    } */
 
     .tab-nav-label {
         width: 40px;
