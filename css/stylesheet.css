@@ -13,7 +13,6 @@ body {
 
 html {
     scroll-behavior: smooth;
-    font-size: 0.87rem;
 }
 
 *,
@@ -168,6 +167,7 @@ section h1 {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    font-size: 0.87rem;
 }
 
 .service-box div {
