@@ -156,7 +156,11 @@ section h1 {
     height: 100%;
     max-height: 400px;
     width: 100%;
+    max-width: 100%;
     object-fit: cover;
+    transition: transform 0.2s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
 .service-box {
@@ -231,6 +235,19 @@ footer {
     min-height: 600px;
     background: rgb(20, 20, 20);
     text-align: center;
+}
+
+/** Efect Image **/
+
+.service-box div {
+    overflow: hidden;
+}
+
+.image-service:hover {
+    filter: grayscale(30%);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /** media screen **/
@@ -339,10 +356,6 @@ footer {
     .image-banner {
         width: 100%;
         min-width: 100%;
-    }
-
-    .image-gradient {
-        width: 100%;
     }
 
     .service-box {

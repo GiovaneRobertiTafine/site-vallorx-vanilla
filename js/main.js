@@ -51,3 +51,9 @@ window.addEventListener('scroll', (event) => {
         }
     });
 });
+
+var horas = setInterval(() => {
+    moment.locale('pt-br');
+    var horario = moment();
+    console.log(horario.add('00:00:01').format('LTS'));
+}, 1000);
