@@ -250,7 +250,65 @@ footer {
     transform: scale(1.1);
 }
 
+/** Schedule **/
+
+.box-time {
+    position: absolute;
+    right: 0px;
+    top: 48px;
+    z-index: 999;
+}
+
+.schedule {
+    width: 110px;
+    height: 300px;
+    position: relative;
+    top: 0px;
+    transition: 0.5s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+.clock {
+    display: none;
+}
+
 /** media screen **/
+@media screen and (max-width: 970px) {
+    .box-time {
+        position: fixed;
+        right: 0px;
+        top: 90px;
+        z-index: 999;
+    }
+
+    .schedule {
+        width: 0px;
+        height: 300px;
+        position: relative;
+        top: 0px;
+        transition: 0.5s;
+        overflow-x: hidden;
+        /* background-color: rgba(255, 255, 255, 0.3); */
+    }
+
+    .clock {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        float: left;
+        background-color: #069;
+        display: flex;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     #main {
         width: 100%;

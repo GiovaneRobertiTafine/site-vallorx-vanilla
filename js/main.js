@@ -1,5 +1,6 @@
 //Change navigation style on scroll
 let nav = document.querySelector('.nav-container');
+let time = 0;
 
 window.addEventListener('scroll', (event) => {
     console.log(screen.width);
@@ -18,6 +19,23 @@ window.addEventListener('resize', () => {
     } else {
         console.log('width');
         window.scrollY > 44 ? nav.classList.add('scroll') : nav.classList.remove('scroll');
+    }
+
+    // Box Time
+    if (screen.width > 970) {
+        $('.schedule').css('width', '110px');
+        $('.schedule').css('opacity', '1');
+    } else if (time === 0) {
+        $('.schedule').css('width', '0px');
+        $('.schedule').css('opacity', '0');
+    }
+});
+
+window.addEventListener('click', (event) => {
+    if (event.path.indexOf(document.querySelector('.box-time')) < 0 && screen.width < 970) {
+        console.log(event.path.indexOf(document.querySelector('.box-time')));
+        $('.schedule').css('width', '0px');
+        $('.schedule').css('opacity', '0');
     }
 });
 
@@ -53,7 +71,20 @@ window.addEventListener('scroll', (event) => {
 });
 
 var horas = setInterval(() => {
-    moment.locale('pt-br');
-    var horario = moment();
-    console.log(horario.add('00:00:01').format('LTS'));
+    moment.locale('pt');
+    $('#new-york').text(moment().subtract('01:00:00').format('LT'));
+    $('#pequim').text(moment().add('11:00:00').format('LT'));
+    $('#londres').text(moment().add('04:00:00').format('LT'));
 }, 1000);
+
+function openNav() {
+    if ($('.schedule').width() === 0) {
+        time = 1;
+        $('.schedule').css('width', '110px');
+        $('.schedule').css('opacity', '1');
+    } else {
+        time = 0;
+        $('.schedule').css('width', '0px');
+        $('.schedule').css('opacity', '0');
+    }
+}
