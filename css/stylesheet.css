@@ -232,7 +232,7 @@ section h1 {
 
 /** footer **/
 footer {
-    min-height: 600px;
+    min-height: 200px;
     background: rgb(20, 20, 20);
     text-align: center;
 }
@@ -272,6 +272,22 @@ footer {
 
 .clock {
     display: none;
+}
+
+/** contato **/
+
+.btn-submit {
+    background-image: linear-gradient(45deg, #069, #00bd68);
+    color: #fff;
+}
+
+.btn-submit:hover {
+    color: #fff;
+    filter: grayscale(30%);
+}
+
+.fab {
+    font-size: 2.5rem;
 }
 
 /** media screen **/

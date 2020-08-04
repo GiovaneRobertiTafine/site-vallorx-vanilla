@@ -88,3 +88,8 @@ function openNav() {
         $('.schedule').css('opacity', '0');
     }
 }
+
+bootstrapValidate('#nome', 'min:5: Mínimo 5 caracteres!');
+bootstrapValidate('#email', 'email: Insira um email válido!');
+bootstrapValidate('#assunto', 'min:5: Mínimo 5 caracteres!');
+bootstrapValidate('#mensagem', 'min:10: Mínimo 10 caracteres!');

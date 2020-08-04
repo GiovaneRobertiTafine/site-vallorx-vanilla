@@ -6,7 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>VallorX</title>
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+        <script src="https://kit.fontawesome.com/80bbdf42a0.js" crossorigin="anonymous"></script>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
@@ -52,9 +53,7 @@
 
             <div class="box-time">
                 <div class="card clock my-auto mx-auto" onclick="openNav()">
-                    <span class="material-icons" style="color: #fff;">
-                        query_builder
-                    </span>
+                    <i class="far fa-clock" style="color: #fff;"></i>
                 </div>
 
                 <div class="card schedule">
@@ -242,13 +241,13 @@
                         </div>
                     </div>
                     <div class="h-100">
-                        <img class="image-fluid image-service" src="./assets/contabil.jpg" alt="" />
+                        <img class="image-fluid image-service" src="./assets/contabil.jpg" alt="contabil" />
                     </div>
                 </div>
 
                 <div class="w-100 service-box flex-reverse" id="tributaria">
                     <div class="h-100">
-                        <img class="image-fluid image-service" src="./assets/tributario6.jpg" alt="" />
+                        <img class="image-fluid image-service" src="./assets/tributario6.jpg" alt="tributario" />
                     </div>
                     <div>
                         <div class="pl-lg-5 p-3 w-100">
@@ -294,13 +293,13 @@
                         </div>
                     </div>
                     <div class="h-100">
-                        <img class="image-fluid image-service" src="./assets/cargueiro3.jpg" alt="" />
+                        <img class="image-fluid image-service" src="./assets/cargueiro3.jpg" alt="cargueiro" />
                     </div>
                 </div>
 
                 <div class="w-100 service-box flex-reverse" id="outsourcing">
                     <div class="h-100">
-                        <img class="image-fluid image-service" src="./assets/outsourcing2.jpg" alt="" />
+                        <img class="image-fluid image-service" src="./assets/outsourcing2.jpg" alt="outsourcing" />
                     </div>
                     <div>
                         <div class="pl-lg-5 p-3 w-100">
@@ -326,7 +325,7 @@
                                 <br /><br />
                                 <strong
                                     >"O segredo não é encontrar alguém que seja igual a você, mas sim encontrar alguém
-                                    com os mesmos abjetivos que você!"</strong
+                                    com os mesmos objetivos que você!"</strong
                                 >
                             </p>
                         </div>
@@ -355,7 +354,7 @@
                         </div>
                     </div>
                     <div class="h-100">
-                        <img class="image-fluid image-service" src="./assets/advogado2.jpg" alt="" />
+                        <img class="image-fluid image-service" src="./assets/advogado2.jpg" alt="advogado" />
                     </div>
                 </div>
             </section>
@@ -365,45 +364,99 @@
                         <h1> <strong>Contato</strong> </h1>
                         <span class="line-title"></span>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, odio, doloremque, sunt tempore
-                        veniam nam maiores porro suscipit dolorem reprehenderit sint sapiente. Earum voluptatibus nulla
-                        esse nisi quos a eaque voluptatum facere ipsam autem consequatur repudiandae impedit hic
-                        blanditiis sint modi magni cupiditate dicta, vero fuga praesentium, cumque soluta iure. Atque
-                        nulla facilis sunt? Esse nam sunt, perferendis iure maiores officiis dolore, vel hic suscipit
-                        iste nobis voluptatum, amet, impedit magnam temporibus velit neque deleniti nulla voluptatibus!
-                        Dolorum, similique, error. Reprehenderit tenetur magnam perspiciatis velit nobis ab quisquam
-                        sequi porro autem, ad maiores quod, sed a architecto cupiditate, perferendis eos mollitia,
-                        minima dolores molestiae! Numquam officia animi delectus enim, laboriosam dolor veniam tempora
-                        consequuntur aliquid sit officiis aut molestiae dolorum perferendis esse reprehenderit vel
-                        nostrum iure, magni, eaque, adipisci voluptas impedit. Blanditiis laboriosam iste molestias
-                        quidem expedita et ipsa porro sed autem cumque quasi fugiat, doloribus sint repellendus laborum,
-                        placeat nihil dignissimos dolorem laudantium, dolorum architecto vel ratione reiciendis? Dolore
-                        facilis laborum magnam laboriosam at quisquam cumque ab, quibusdam ipsum tempore doloribus rem
-                        voluptatibus, sequi animi excepturi officiis adipisci consequatur odio! Architecto expedita eos
-                        ad veniam sapiente asperiores esse aliquid nobis, molestiae natus aut eius, quia vitae rerum
-                        incidunt dolores eligendi odit magni vel tenetur voluptatum alias consequatur. Culpa rerum
-                        architecto omnis hic ullam ex ipsam at fugiat aliquam, itaque sed, in ratione aperiam tempora
-                        officiis eaque a optio! Beatae cum sequi sunt obcaecati nostrum, in harum dolorem corporis
-                        eveniet tenetur quasi atque quis earum accusantium deserunt illo veritatis quibusdam. Obcaecati
-                        ipsam nam velit consequatur, commodi magnam quaerat harum iusto deserunt voluptatum cumque
-                        nesciunt veritatis perferendis amet vel aut nemo quod, qui! Dolores nesciunt animi veniam
-                        maxime. Id sint nihil vel ab molestias consectetur odit, aperiam repellat autem quibusdam odio
-                        quod, nulla commodi necessitatibus at dolor! Molestiae ratione, unde eius.
-                    </p>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 mx-auto">
+                            <form id="formExemplo" method="POST" action="./js/email.php" role="form">
+                                <div class="form-group">
+                                    <label for="nome">Nome completo</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nome"
+                                        aria-describedby="nome"
+                                        name="nome"
+                                        title="Nome Completo"
+                                        required
+                                        minlength="5"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        aria-describedby="email"
+                                        name="email"
+                                        title="Email"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="assunto">Assunto</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="assunto"
+                                        aria-describedby="assunto"
+                                        name="assunto"
+                                        title="Assunto"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="mensagem">Mensagem</label>
+                                    <textarea
+                                        class="form-control"
+                                        id="mensagem"
+                                        rows="5"
+                                        name="mensagem"
+                                        style="overflow-y: auto; resize: none;"
+                                        title="Mensagem"
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-submit">Enviar</button>
+                            </form>
+                            <br /><br />
+                            <h4>Fale conosco:</h4><br />
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <i class="fas fa-phone-alt"></i>
+                                    +55 11 97769-6191
+                                </div>
+                                <div class="col-lg-6 col-12 mt-3 mt-lg-0">
+                                    <i class="fas fa-envelope"></i>
+                                    claudemir@vallorx.com.br
+                                </div>
+                            </div>
+                            <br /><br />
+                            <h4>Siga-nos:</h4><br />
+                            <div class="row">
+                                <div class="col">
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram ml-3"></i>
+                                    <i class="fab fa-linkedin ml-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- footer -->
             <footer>
-                <h1>Footer</h1>
+                <!-- <h1>Footer</h1> -->
+                <div class="container"> </div>
             </footer>
         </main>
 
         <script src="./js/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         <!-- <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script> -->
-        <script src="./js/moment-with-locales.js"></script>
+        <script src="./js/moment-with-locales.min.js"></script>
+        <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>
