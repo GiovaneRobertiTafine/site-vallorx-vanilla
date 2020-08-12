@@ -3,12 +3,15 @@ let nav = document.querySelector('.nav-container');
 let time = 0;
 
 window.addEventListener('scroll', (event) => {
-    console.log(screen.width);
-
-    // window.scrollY >= 44 ? nav.classList.add('scroll') : nav.classList.remove('scroll');
 
     if (screen.width > 768) {
-        window.scrollY >= 44 ? nav.classList.add('scroll') : nav.classList.remove('scroll');
+        if (window.scrollY >= 44) {
+            nav.classList.add('scroll');
+            $('.nav-logo img').css('width', '100px');
+        } else {
+            nav.classList.remove('scroll');
+            $('.nav-logo img').css('width', '200px');
+        }
     }
 });
 
@@ -40,6 +43,12 @@ window.addEventListener('click', (event) => {
 });
 
 $(document).ready(function () {
+    if (window.scrollY >= 44) {
+        $('.nav-logo img').css('width', '100px');
+    } else {
+        $('.nav-logo img').css('width', '200px');
+    }
+
     if (screen.width <= 768) {
         nav.classList.add('scroll');
     }
