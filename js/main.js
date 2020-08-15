@@ -43,14 +43,18 @@ window.addEventListener('click', (event) => {
 });
 
 $(document).ready(function () {
-    if (window.scrollY >= 44) {
-        $('.nav-logo img').css('width', '100px');
-    } else {
-        $('.nav-logo img').css('width', '200px');
-    }
+    var data = new Date()
 
-    if (screen.width <= 768) {
+    data.toLocaleTimeString('pt-br')
+
+    if (screen.width < 768) {
         nav.classList.add('scroll');
+    } else {
+        if (window.scrollY >= 44) {
+            $('.nav-logo img').css('width', '100px');
+        } else {
+            $('.nav-logo img').css('width', '200px');
+        }
     }
 
     $('.dropdown').hover(
@@ -61,6 +65,71 @@ $(document).ready(function () {
             screen.width > 768 && $('#sub-menu').slideUp('medium');
         }
     );
+
+    // Enviar email
+    $('#btn').click( function(){
+        /* Coletando dados */
+        
+        if($('#nome').val().trim() === '' || $('#nome').val().trim().length < 5) {
+            $('#nome').focus()
+            return
+        } 
+        var patt1 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+        if($('#email').val().trim() === '' || !($('#email').val().trim().match(patt1))) {
+            $('#email').focus()
+            return
+        } 
+        if($('#assunto').val().trim() === '' || $('#assunto').val().trim().length < 5) {
+            $('#assunto').focus()
+            return
+        } 
+        if($('#mensagem').val().trim() === '' || $('#mensagem').val().trim().length < 10) {
+            $('#mensagem').focus()
+            return
+        } 
+
+        var urlData = $('#formExemplo').serialize();
+
+        $.ajax({
+            type : 'POST',
+            url  : './js/email.php',
+            data : urlData,
+            dataType: 'json',
+            success: (result) => {
+                if (result.status === '200') {
+                    $('#resposta-email').html(result.mensagem).show()
+                    setTimeout(() => {
+                        $('#resposta-email').hide()
+                    }, 3000)
+                } else if (result.status === '400') {
+                    $('#resposta-email').html(result.mensagem).css('color', 'red').show()
+                    setTimeout(() => {
+                        $('#resposta-email').hide()
+                    }, 3000)
+                } 
+            },
+            error: (result) => {
+                $('#resposta-email').html('Infelizmente houve um erro ao enviar sua mensagem!').css('color', 'red').show()
+                setTimeout(() => {
+                    $('#resposta-email').hide()
+                }, 3000)
+
+            },
+            beforeSend: () => { /* antes de enviar */
+                $('#loading').fadeIn('fast'); /* mostra o loading */
+            },
+            complete: () => { /* completo */
+                $('#loading').fadeOut('fast'); /* esconde o loading */
+            }
+            
+        });
+        
+        temp = null;
+
+        return false;
+
+    });
+
 });
 
 //Active navigation on scroll
@@ -102,3 +171,5 @@ bootstrapValidate('#nome', 'min:5: Mínimo 5 caracteres!');
 bootstrapValidate('#email', 'email: Insira um email válido!');
 bootstrapValidate('#assunto', 'min:5: Mínimo 5 caracteres!');
 bootstrapValidate('#mensagem', 'min:10: Mínimo 10 caracteres!');
+
+

@@ -6,7 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>VallorX</title>
 
-        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./assets/favicon/site.webmanifest">
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
         <script src="https://kit.fontawesome.com/80bbdf42a0.js" crossorigin="anonymous"></script>
         <link
             rel="stylesheet"
@@ -17,7 +24,6 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="./css/stylesheet.css" />
-        <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
     </head>
     <body>
         <main id="main">
@@ -214,14 +220,16 @@
                         </div>
                     </div> -->
                     <div class="text-center">
+                        <h3>
                         <p>
                             <em class="text-muted">
-                                <h3>
+                                
                                     "Esteja com pessoas qualificadas e capacitadas que possam te ajudar e não com
                                     pessoas a quem você precisa impressionar."
-                                </h3>
+                                
                             </em>
                         </p>
+                        </h3>
                     </div>
                 </div>
 
@@ -366,7 +374,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-12 mx-auto">
-                            <form id="formExemplo" method="POST" action="./js/email.php" role="form">
+                            <form id="formExemplo" role="form">
                                 <div class="form-group">
                                     <label for="nome">Nome completo</label>
                                     <input
@@ -417,7 +425,12 @@
                                     ></textarea>
                                 </div>
 
-                                <button type="submit" class="btn btn-submit">Enviar</button>
+                                <div class="d-flex align-items-center">
+                                    <button type="button" class="btn btn-submit float-left" id="btn">Enviar</button>
+                                    <img src="./assets/loading.gif" alt="loading" id="loading">
+                                </div>
+                                <br />
+                                <span id="resposta-email"></span>
                             </form>
                             <br /><br />
                             <h4>Fale conosco:</h4><br />
@@ -456,18 +469,19 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6 mx-auto">
-                            Copyright &#0169 - Todos os Direitos Reservados
+                            Copyright &#0169; - Todos os Direitos Reservados
                         </div>
                     </div>  
                 </div>
                 <span></span>
-                <div class="d-lg-flex justify-content-end mt-3">
-                    <small>Desenvolvido por:</small>
+                <div class="d-lg-flex justify-content-end align-content-center w-100">
+                    <small style="cursor: pointer;">Desenvolvido por: Giovane Roberti Tafine</small>
                 </div>
                 
             </footer>
         </main>
 
+        <!-- <script src="https://phpmailer.apache-extras.org.codespot.com/files/PHPMailer_5.2.1.tgz"></script> -->
         <script src="./js/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         <!-- <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script> -->
