@@ -100,19 +100,19 @@ $(document).ready(function () {
                     $('#resposta-email').html(result.mensagem).show()
                     setTimeout(() => {
                         $('#resposta-email').hide()
-                    }, 3000)
+                    }, 10000)
                 } else if (result.status === '400') {
                     $('#resposta-email').html(result.mensagem).css('color', 'red').show()
                     setTimeout(() => {
                         $('#resposta-email').hide()
-                    }, 3000)
+                    }, 10000)
                 } 
             },
             error: (result) => {
                 $('#resposta-email').html('Infelizmente houve um erro ao enviar sua mensagem!').css('color', 'red').show()
                 setTimeout(() => {
                     $('#resposta-email').hide()
-                }, 3000)
+                }, 10000)
 
             },
             beforeSend: () => { /* antes de enviar */
@@ -120,6 +120,7 @@ $(document).ready(function () {
             },
             complete: () => { /* completo */
                 $('#loading').fadeOut('fast'); /* esconde o loading */
+                $('#formExemplo')[0].reset();
             }
             
         });
@@ -130,7 +131,12 @@ $(document).ready(function () {
 
     });
 
+    // Link desenvolvido
+    $('#desenvolvido').click(() => {
+        window.open('https://api.whatsapp.com/send?phone=5511968397621', '_blank')
+    })
 });
+
 
 //Active navigation on scroll
 window.addEventListener('scroll', (event) => {
