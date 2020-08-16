@@ -155,6 +155,19 @@ section h1 {
     object-fit: cover;
 }
 
+.carousel-indicators {
+    position: absolute; 
+    top: 300px;
+}
+
+.carousel-indicators li {
+    background-color: #787473;
+}
+
+.carousel-indicators .active {
+    background-color: #069;
+}
+
 /** service **/
 
 .image-banner {
