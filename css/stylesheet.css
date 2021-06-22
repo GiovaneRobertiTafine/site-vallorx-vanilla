@@ -207,6 +207,14 @@ section h1 {
     width: 50%;
 }
 
+.service-expatriados {
+    font-size: 0.7rem;
+}
+
+.flag-expatriados {
+    font-size: 1.3rem;
+}
+
 /** styles **/
 
 .text-blue {
@@ -300,7 +308,7 @@ footer span {
 .box-time {
     position: absolute;
     right: 0px;
-    top: 48px;
+    top: 95px;
     z-index: 999;
 }
 
