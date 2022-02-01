@@ -58,12 +58,14 @@ header {
     margin: 0 auto;
     padding: 10px 0;
 }
+
 .nav-checkbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
+
 .nav-logo {
     text-decoration: none;
     color: #069;
@@ -104,10 +106,12 @@ header {
     margin: 0;
     padding: 0;
 }
+
 .tab-content li {
     display: inline-block;
     margin-right: 20px;
 }
+
 .tab-content li a {
     text-decoration: none;
     color: #000;
@@ -136,6 +140,7 @@ header {
     color: #069;
     /* border-bottom: 2px solid #069; */
 }
+
 .nav-container a.active {
     color: #069;
     /* border-bottom: 2px solid #069; */
@@ -156,7 +161,7 @@ section h1 {
 }
 
 .carousel-indicators {
-    position: absolute; 
+    position: absolute;
     top: 300px;
 }
 
@@ -175,8 +180,10 @@ section h1 {
         url(../assets/reuniao.jpg);
     height: 250px;
     width: 70%;
-    background-position: center bottom; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center bottom;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -258,7 +265,7 @@ section h1 {
     width: 200%;
 }
 
-#sub-menu > ul > li {
+#sub-menu>ul>li {
     cursor: pointer;
     margin: 0px 0px 5px 5px;
 }
@@ -283,7 +290,8 @@ footer span {
     float: left;
     margin-top: 10px;
     left: 0;
-    background-color: rgb(10, 10, 10);;
+    background-color: rgb(10, 10, 10);
+    ;
 }
 
 #logopb {
@@ -406,9 +414,11 @@ footer span {
     #main {
         width: 100%;
     }
+
     header {
         width: 100%;
     }
+
     .nav-container {
         width: 100%;
     }
@@ -476,19 +486,19 @@ footer span {
         transition: all 0.3s linear;
     }
 
-    #tab-nav:checked ~ .tab-content {
+    #tab-nav:checked~.tab-content {
         max-height: 400px;
     }
 
-    #tab-nav:checked ~ label #tab-menu {
+    #tab-nav:checked~label #tab-menu {
         background-color: transparent;
     }
 
-    #tab-nav:checked ~ label #tab-menu::before {
+    #tab-nav:checked~label #tab-menu::before {
         transform: translate(0px, -8px) rotate(-45deg);
     }
 
-    #tab-nav:checked ~ label #tab-menu::after {
+    #tab-nav:checked~label #tab-menu::after {
         transform: translate(0px, 8px) rotate(45deg);
     }
 
@@ -496,7 +506,7 @@ footer span {
         padding: 10px 0;
     }
 
-    #tab-nav:checked ~ .tab-nav-label {
+    #tab-nav:checked~.tab-nav-label {
         color: #000;
     }
 
@@ -527,5 +537,5 @@ footer span {
         flex-direction: column-reverse;
     }
 
-    
+
 }
