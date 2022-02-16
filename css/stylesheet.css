@@ -565,3 +565,13 @@ iframe {
     object-position: bottom center;
     background-attachment: fixed;
 }
+
+.img-parceiros {
+    width: 150px;
+    height: 150px;
+    /* background-position: bottom center; */
+    background-repeat: no-repeat;
+    object-fit: contain;
+    object-position: center center;
+
+}
