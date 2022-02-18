@@ -70,9 +70,18 @@ $(document).ready(function () {
             $('#nome').focus();
             return;
         }
-        var patt1 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if ($('#email').val().trim() === '' || !($('#email').val().trim().match(patt1))) {
+        if ($('#empresa').val().trim() === '' || $('#empresa').val().trim().length < 5) {
+            $('#empresa').focus();
+            return;
+        }
+        var patternEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ($('#email').val().trim() === '' || !($('#email').val().trim().match(patternEmail))) {
             $('#email').focus();
+            return;
+        }
+        var patternTelefone = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
+        if ($('#telefone').val().trim() === '' || !($('#telefone').val().trim().match(patternTelefone))) {
+            $('#telefone').focus();
             return;
         }
         if ($('#assunto').val().trim() === '' || $('#assunto').val().trim().length < 5) {

@@ -12,12 +12,14 @@ define('SITE', 'vallorx');
  
 if (isset($_POST)):
     $nome    = (isset($_POST['nome']))? $_POST['nome']: '';
+    $empresa    = (isset($_POST['empresa']))? $_POST['empresa']: '';
     $email   = (isset($_POST['email']))? $_POST['email']: '';
+    $telefone   = (isset($_POST['telefone']))? $_POST['telefone']: '';
     $assunto = (isset($_POST['assunto']))? $_POST['assunto']: '';
     $msg     = (isset($_POST['mensagem']))? $_POST['mensagem']: '';
  
     // Valida se foram preenchidos todos os campos
-    if (empty($nome) || empty($email) || empty($assunto) || empty($msg)):
+    if (empty($nome) || empty($empresa) || empty($email) || empty($telefone) || empty($assunto) || empty($msg)):
         $array  = array('status' => '400', 'mensagem' => 'Preencher todo os campos obrigatórios(*)!');
         echo json_encode($array);
     else:
@@ -29,9 +31,11 @@ if (isset($_POST)):
         // Monta a mensagem do email
         $mensagem = "Contato enviado pelo site ".SITE."\n";
         $mensagem .= "----------------------------------------------------------\n";
-        $mensagem .= "Nome do Contato: ".$nome."\n";
-        $mensagem .= "E-mail do Contato: ".$email."\n";
+        $mensagem .= "Nome: ".$nome."\n";
+        $mensagem .= "E-mail: ".$email."\n";
+        $mensagem .= "Telefone: ".$telfone."\n";
         $mensagem .= "----------------------------------------------------------\n";
+        $mensagem .= "Assunto: \n".$assunto."\n";
         $mensagem .= "Mensagem: \n".$msg."\n";
  
         // Envia o e-mail e captura o retorno

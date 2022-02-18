@@ -422,10 +422,11 @@
                     <span class="line-title"></span>
                 </div>
                 <div class="row px-3">
-                    <div class="col">
+                    <div class="col-2 d-flex align-items-center">
                         <a href="#contact-us">
                             <img src="./assets/parceiros/orce.png" class="img-parceiros" alt="orce">
                         </a>
+                        <strong class="fw-bold">Joint Ventures</strong>
                     </div>
                 </div>
             </div>
@@ -440,19 +441,57 @@
                     <div class="col-lg-6 col-md-12 mx-auto">
                         <form id="formExemplo" role="form">
                             <div class="form-group">
-                                <label for="nome">Nome completo</label>
+                                <label for="nome">Nome completo:</label>
                                 <input type="text" class="form-control" id="nome" aria-describedby="nome" name="nome"
                                     title="Nome Completo" required minlength="5" />
                             </div>
                             <div class="form-group">
-                                <label for="Email">Email</label>
+                                <label for="empresa">Empresa:</label>
+                                <input type="text" class="form-control" id="empresa" aria-describedby="empresa"
+                                    name="empresa" title="empresa" required minlength="5" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
                                 <input type="email" class="form-control" id="email" aria-describedby="email"
                                     name="email" title="Email" required />
                             </div>
                             <div class="form-group">
+                                <label for="telefone">Telefone:</label>
+                                <input type="telefone" class="form-control" id="telefone" aria-describedby="telefone"
+                                    name="telefone" title="telefone" required />
+                            </div>
+                            <div class="form-group">
                                 <label for="assunto">Assunto</label>
-                                <input type="text" class="form-control" id="assunto" aria-describedby="assunto"
-                                    name="assunto" title="Assunto" required />
+                                <select class="form-control" id="assunto" aria-describedby="assunto" name="assunto"
+                                    name="assunto" title="assunto" required aria-valuetext="">
+                                    <option value="" hidden></option>
+                                    <option value="Planejamento Tributário">
+                                        Planejamento Tributário</option>
+                                    <option
+                                        value="Revisão de Crédito Tributário – Impostos Diretos e Indiretos (Federal – Estadual – Municipal)">
+                                        Revisão de Crédito Tributário – Impostos Diretos e Indiretos (Federal – Estadual
+                                        – Municipal)</option>
+                                    <option value="Revisão de Obrigações Acessórias (Federal – Estadual – Municipal)">
+                                        Revisão de Obrigações Acessórias (Federal – Estadual – Municipal)</option>
+                                    <option value="Revisão da Conciliação Contábil – Ativo e Passivo">
+                                        Revisão da Conciliação Contábil – Ativo e Passivo</option>
+                                    <option value="Balanço Patrimonial - Fechamento Contábil">
+                                        Balanço Patrimonial - Fechamento Contábil</option>
+                                    <option value="BPO – Terceirização dos Processos de Negócios">
+                                        BPO – Terceirização dos Processos de Negócios</option>
+                                    <option value="Reorganização Societária">
+                                        Reorganização Societária</option>
+                                    <option value="Brasileiro/Expatriado – Saída Definitiva do País">
+                                        Brasileiro/Expatriado – Saída Definitiva do País</option>
+                                    <option value="DIRPF – Elaboração e Preenchimento do Carnê-Leão">
+                                        DIRPF – Elaboração e Preenchimento do Carnê-Leão</option>
+                                    <option
+                                        value="Serviços para Advogados – Cálculos de Rescisão Trabalhista e Desapropriação de Bens Imóveis">
+                                        Serviços para Advogados – Cálculos de Rescisão Trabalhista e Desapropriação de
+                                        Bens Imóveis</option>
+                                    <option value="Outro/ Especificar:">
+                                        Outro/ Especificar</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="mensagem">Mensagem</label>

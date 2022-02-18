@@ -567,8 +567,8 @@ iframe {
 }
 
 .img-parceiros {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: auto;
     /* background-position: bottom center; */
     background-repeat: no-repeat;
     object-fit: contain;
