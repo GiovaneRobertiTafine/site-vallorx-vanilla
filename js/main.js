@@ -94,7 +94,6 @@ $(document).ready(function () {
         }
 
         var urlData = $('#formExemplo').serialize();
-
         $.ajax({
             type: 'POST',
             url: './js/email.php',

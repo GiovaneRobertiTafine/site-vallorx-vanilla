@@ -17,7 +17,7 @@ if (isset($_POST)):
     $telefone   = (isset($_POST['telefone']))? $_POST['telefone']: '';
     $assunto = (isset($_POST['assunto']))? $_POST['assunto']: '';
     $msg     = (isset($_POST['mensagem']))? $_POST['mensagem']: '';
- 
+    
     // Valida se foram preenchidos todos os campos
     if (empty($nome) || empty($empresa) || empty($email) || empty($telefone) || empty($assunto) || empty($msg)):
         $array  = array('status' => '400', 'mensagem' => 'Preencher todo os campos obrigatórios(*)!');
@@ -33,7 +33,7 @@ if (isset($_POST)):
         $mensagem .= "----------------------------------------------------------\n";
         $mensagem .= "Nome: ".$nome."\n";
         $mensagem .= "E-mail: ".$email."\n";
-        $mensagem .= "Telefone: ".$telfone."\n";
+        $mensagem .= "Telefone: ".$telefone."\n";
         $mensagem .= "----------------------------------------------------------\n";
         $mensagem .= "Assunto: \n".$assunto."\n";
         $mensagem .= "Mensagem: \n".$msg."\n";
