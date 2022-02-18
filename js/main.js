@@ -79,7 +79,12 @@ $(document).ready(function () {
             $('#email').focus();
             return;
         }
-        var patternTelefone = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
+        var patternDdd = /^([\d]){2}$/;
+        if ($('#ddd').val().trim() === '' || !($('#ddd').val().trim().match(patternDdd))) {
+            $('#ddd').focus();
+            return;
+        }
+        var patternTelefone = /^([9])?([\d]){4}([\-])?([\d]){4}$/;
         if ($('#telefone').val().trim() === '' || !($('#telefone').val().trim().match(patternTelefone))) {
             $('#telefone').focus();
             return;
