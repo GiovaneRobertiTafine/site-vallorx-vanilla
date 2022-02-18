@@ -34,7 +34,7 @@ if (isset($_POST)):
         $mensagem .= "----------------------------------------------------------\n";
         $mensagem .= "Nome: ".$nome."\n";
         $mensagem .= "E-mail: ".$email."\n";
-        $mensagem .= "Telefone: ".$ddd. .$telefone."\n";
+        $mensagem .= "Telefone: ".$ddd. + .$telefone."\n";
         $mensagem .= "----------------------------------------------------------\n";
         $mensagem .= "Assunto: \n".$assunto."\n";
         $mensagem .= "Mensagem: \n".$msg."\n";
